@@ -1,0 +1,13 @@
+<div>
+  <h2>Ngrx demo</h2>
+
+  <button (click)="fetchLanguages()">Fetch</button>
+
+  <ul>
+
+    <ol *ngFor="let language of (languageState$ | async).languages ">
+        {{language.english_name}}- [{{language.name}}] - {{language.iso_639_1}}
+    </ol>
+  </ul>
+
+</div>
